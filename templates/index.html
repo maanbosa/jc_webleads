@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% block body%}
+
+
+<div class="col-md-4 offset-md-4">
+    <div class="card card-body">
+        <h3>Solicitud de Afiliación</h3>
+        <form action="/lead" method="POST">
+            <div class="form-group">
+                <label for="inputName">Nombre</label>
+                <input type="text" name="name" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="inputIdNumber">Nro de Documento de Identidad</label>
+                <input type="text" name="id_number" class="form-control" id="inputIdNumber" aria-describedby="idNumberHelp" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">Dirección de correo</label>
+                <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="inputMobile">Nro de celular</label>
+                <input type="text" name="mobile" class="form-control" id="inputMobile" aria-describedby="mobileHelp" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="inputCapcha">Ingrese el siguiente código <span style="font-size: 125%;">( {{ capcha }} )</span></label>
+                <input type="text" name="capcha" class="form-control" id="inputMobile" aria-describedby="capchaHelp" placeholder="">
+                <small id="capchaHelp" class="form-text text-muted">Nosotros jamás compartiremos su información.</small>
+            </div>
+
+            <!-- <div class="form-group">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text">Código: {{ capcha }}</span>
+                    <input type="text" name="capcha" placeholder="Input the code" class="form-control">
+                </div>
+            </div> -->
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Confirmar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
