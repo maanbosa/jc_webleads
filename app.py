@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.secret_key = ''
 
 # server credentials
-HOST = "127.0.0.1"
+HOST = "192.168.10.242"
 PORT = 5000
 ALPHABET = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 CAPCHA = ''
